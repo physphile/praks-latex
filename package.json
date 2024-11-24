@@ -1,0 +1,27 @@
+{
+	"name": "example-bare",
+	"type": "module",
+	"scripts": {
+		"dev": "bun run generate && bunx vinxi dev",
+		"build": "bun run convert && bun run generate && bunx vinxi build",
+		"start": "bunx vinxi start",
+		"generate": "bun src/scripts/generate.ts && bunx prettier --write ./src/constants/endpoints.ts",
+		"convert": "bun src/scripts/convert.ts"
+	},
+	"dependencies": {
+		"@solidjs/meta": "^0.29.4",
+		"@solidjs/router": "^0.14.1",
+		"@solidjs/start": "^1.0.6",
+		"marked-katex-extension": "^5.1.1",
+		"solid-js": "^1.8.20",
+		"vinxi": "^0.4.1"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.1.6",
+		"marked": "^14.0.0",
+		"sharp": "^0.33.4"
+	}
+}

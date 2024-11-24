@@ -1,0 +1,49 @@
+.content {
+	padding: 0 8px 8px;
+	hyphens: auto;
+	word-break: break-word;
+	overflow: hidden;
+}
+
+.summary {
+	height: 32px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 4px;
+}
+
+.details:first-child > .summary {
+	margin-top: 0;
+}
+
+.details[open] {
+	background: rgba(0, 0, 0, 5%);
+}
+
+.details[open] .summary {
+	background: none;
+}
+
+.summary::before {
+	content: "\25BF";
+	margin-right: 8px;
+	transition: transform 300ms ease-in-out;
+	transform: rotate(0);
+}
+
+.details[open] > .summary::before {
+	transform: rotate(180deg);
+}
+
+.li {
+	list-style-position: inside;
+}
+
+.li:not(:last-child) {
+	margin-bottom: 8px;
+}

@@ -1,0 +1,20 @@
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--navigation-width);
+  background: peachpuff;
+  padding: 16px 8px;
+}
+
+.root[open] {
+  background: none;
+}
+
+@media screen and (width <= 900px) {
+  .navigation {
+    position: initial;
+    width: 100%;
+  }
+}
